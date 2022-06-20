@@ -1,6 +1,7 @@
 * {
 	margin: none;
 	padding: none;
+    font-family: calibri;
 }
 .center {
 	display: flex;
@@ -9,21 +10,27 @@
 }
 
 #slider {
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	height: 100vh;
 }
 #container {
 	height: 100%;
+    border: 8px solid green;
 }
-.tt-container {
+.tableContainer {
+	border: 5px solid red;
 	box-sizing: border-box;
-	border: 3px solid red;
+    height: 100%;
 	padding: 30px;
 	width: 100%;
 }
 .tt {
 	width: 100%;
 	height: 100%;
+    border: 1px solid #aaa;
+}
+.tt td{
+    border: 1px solid rgb(126, 167, 255);
 }
 .header {
 }
@@ -31,7 +38,7 @@
 @media (max-width: 555px) {
 	#container {
 	}
-	.tt-container {
+	.tableContainer {
 	}
 	.header {
 		font-size: calc(5vw + 4vh);
