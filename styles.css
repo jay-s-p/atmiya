@@ -1,0 +1,20 @@
+*{
+    margin: none;
+    padding: none;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#slider{
+    height: 100vh;
+}
+#container{
+    height: 100%;
+}
+.tt{
+    width: auto;
+    height: 100%;
+}
