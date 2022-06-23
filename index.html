@@ -15,11 +15,11 @@
 <body>
 
     <div uk-slider="sets: false; center: true" id="slider">
-        <ul class="uk-slider-items center" id="container">
-            <!-- <li>
-                <div class="tableContainer">
+        <ul class="uk-slider-items center uk-grid" id="list">
+            <li>
+                <div class="container">
                     <h1 class="header">Monday</h1>
-                    <table border="10px" class="tt">
+                    <table class="tt">
                         <tr>
                             <td>07:30</td>
                             <td>OOPJ</td>
@@ -39,9 +39,9 @@
                 </div>
             </li>
             <li>
-                <div class="tableContainer">
+                <div class="container">
                     <h1 class="header">Tuesday</h1>
-                    <table border="10px" class="tt">
+                    <table class="tt">
                         <tr>
                             <td>07:30</td>
                             <td>08:25</td>
@@ -57,9 +57,9 @@
                 </div>
             </li>
             <li>
-                <div class="tableContainer">
+                <div class="container">
                     <h1 class="header">Wednesday</h1>
-                    <table border="10px" class="tt">
+                    <table class="tt">
                         <tr>
                             <td>07:30</td>
                             <td>08:25</td>
@@ -75,9 +75,9 @@
                 </div>
             </li>
             <li>
-                <div class="tableContainer">
+                <div class="container">
                     <h1 class="header">Thursday</h1>
-                    <table border="10px" class="tt">
+                    <table class="tt">
                         <tr>
                             <td>07:30</td>
                             <td>08:25</td>
@@ -93,9 +93,9 @@
                 </div>
             </li>
             <li>
-                <div class="tableContainer">
+                <div class="container">
                     <h1 class="header">Friday</h1>
-                    <table border="10px" class="tt">
+                    <table class="tt">
                         <tr>
                             <td>07:30</td>
                             <td>08:25</td>
@@ -109,7 +109,19 @@
                         </tr>
                     </table>
                 </div>
-            </li> -->
+            </li>
+        </ul>
+
+        <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    
+        <ul>
+            <li uk-slider-item="0"><a href="#">1</a></li>
+            <li uk-slider-item="1"><a href="#">2</a></li>
+            <li uk-slider-item="3"><a href="#">3</a></li>
+            <li uk-slider-item="4"><a href="#">4</a></li>
+            <li uk-slider-item="5"><a href="#">5</a></li>
         </ul>
     </div>
 
@@ -118,7 +130,7 @@
 
     <!-- 
         <h1 class="header">Day </h1>
-    <table border="10px">
+    <table>
         <tr>
             <td>07:30</td>
             <td>08:25</td>

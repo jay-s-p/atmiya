@@ -33,54 +33,54 @@ var timeTable = [
 
 
 let i = 0;
-for (let day of timeTable) {
+// for (let day of timeTable) {
 
-    // create li tag
-    let li = document.createElement("li");
+//     // create li tag
+//     let li = document.createElement("li");
 
-    // create table container
-    let tableContainer = document.createElement("div");
-    tableContainer.className = "tableContainer"; // adding class name
-    li.appendChild(tableContainer); // append to li
+//     // create table container
+//     let container = document.createElement("div");
+//     container.className = "container"; // adding class name
+//     li.appendChild(container); // append to li
 
-    // create h1 header
-    let h1 = document.createElement("h1");
-    h1.className = "header"; // add class name
-    h1.innerText = days[i];
-    tableContainer.appendChild(h1); // append h1 to tableContainer
+//     // create h1 header
+//     let h1 = document.createElement("h1");
+//     h1.className = "header"; // add class name
+//     h1.innerText = days[i];
+//     container.appendChild(h1); // append h1 to container
 
-    // create table
-    let table = document.createElement("table");
-    table.className = "tt"; // give it class name
-    tableContainer.appendChild(table); // append table to table container
+//     // create table
+//     let table = document.createElement("table");
+//     table.className = "tt"; // give it class name
+//     container.appendChild(table); // append table to table container
 
-    // loop for tr
-    for (data of day) {
-        // create tr element
-        let tr = document.createElement("tr");
+//     // loop for tr
+//     for (data of day) {
+//         // create tr element
+//         let tr = document.createElement("tr");
 
-        // TD logic
-        if(data.subject == "RECESS")
-        {
-            let td = document.createElement("td");
-            td.innerHTML = data.subject;
-            td.colSpan=2;
-            tr.appendChild(td);
-        } else {
-            let td1 = document.createElement("td");
-            let td2 = document.createElement("td");
-            td1.innerText = data.startTime;
-            td2.innerHTML = data.subject;
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-        }
-        console.log(data);
+//         // TD logic
+//         if(data.subject == "RECESS")
+//         {
+//             let td = document.createElement("td");
+//             td.innerHTML = data.subject;
+//             td.colSpan=2;
+//             tr.appendChild(td);
+//         } else {
+//             let td1 = document.createElement("td");
+//             let td2 = document.createElement("td");
+//             td1.innerText = data.startTime;
+//             td2.innerHTML = data.subject;
+//             tr.appendChild(td1);
+//             tr.appendChild(td2);
+//         }
+//         console.log(data);
         
         
-        table.appendChild(tr); // append tr to table
-    }
+//         table.appendChild(tr); // append tr to table
+//     }
 
-    document.getElementById("container").appendChild(li);
+//     document.getElementById("container").appendChild(li);
 
-    i++;
-}
+//     i++;
+// }
