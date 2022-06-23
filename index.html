@@ -9,142 +9,173 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
     <title>5th sem bx Time Table</title>
 </head>
 
 <body>
 
-    <div uk-slider="sets: false; center: true" id="slider">
-        <ul class="uk-slider-items center uk-grid" id="list">
-            <li>
-                <div class="container">
-                    <h1 class="header">Monday</h1>
-                    <table class="tt">
-                        <tr>
-                            <td>07:30</td>
-                            <td>OOPJ</td>
-                        </tr>
-                        <tr>
-                            <td>08:25</td>
-                            <td>ADA</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Recess</td>
-                        </tr>
-                        <tr>
-                            <td>09:50</td>
-                            <td>ACN</td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <h1 class="header">Tuesday</h1>
-                    <table class="tt">
-                        <tr>
-                            <td>07:30</td>
-                            <td>08:25</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Recess</td>
-                        </tr>
-                        <tr>
-                            <td>09:50</td>
-                            <td>10:45</td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <h1 class="header">Wednesday</h1>
-                    <table class="tt">
-                        <tr>
-                            <td>07:30</td>
-                            <td>08:25</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Recess</td>
-                        </tr>
-                        <tr>
-                            <td>09:50</td>
-                            <td>10:45</td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <h1 class="header">Thursday</h1>
-                    <table class="tt">
-                        <tr>
-                            <td>07:30</td>
-                            <td>08:25</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Recess</td>
-                        </tr>
-                        <tr>
-                            <td>09:50</td>
-                            <td>10:45</td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <h1 class="header">Friday</h1>
-                    <table class="tt">
-                        <tr>
-                            <td>07:30</td>
-                            <td>08:25</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Recess</td>
-                        </tr>
-                        <tr>
-                            <td>09:50</td>
-                            <td>10:45</td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-        </ul>
+    <section id="main">
 
-        <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
+        <div uk-slider="center: true " id="slider">
+            <ul class="uk-slider-items center uk-grid" id="list">
     
-        <ul>
-            <li uk-slider-item="0"><a href="#">1</a></li>
-            <li uk-slider-item="1"><a href="#">2</a></li>
-            <li uk-slider-item="3"><a href="#">3</a></li>
-            <li uk-slider-item="4"><a href="#">4</a></li>
-            <li uk-slider-item="5"><a href="#">5</a></li>
-        </ul>
-    </div>
-
-
-
-
+                <!-- <li>
+                    <div class="container center">
+                        <div class="card">
+                            <h1 class="header">Monday</h1>
+                            <table class="tt">
+                                <tr>
+                                    <td class="tl">07:30</td>
+                                    <td class="tr">OOPJ</td>
+                                </tr>
+                                <tr>
+                                    <td>08:25</td>
+                                    <td>ADA</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Recess</td>
+                                </tr>
+                                <tr>
+                                    <td class="bl">09:50</td>
+                                    <td class="br">ACN</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container center">
+                        <div class="card">
+                            <h1 class="header">Tuesday</h1>
+                            <table class="tt">
+                                <tr>
+                                    <td>07:30</td>
+                                    <td>08:25</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Recess</td>
+                                </tr>
+                                <tr>
+                                    <td>09:50</td>
+                                    <td>10:45</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container center">
+                        <div class="card">
+                            <h1 class="header">Wednesday</h1>
+                            <table class="tt">
+                                <tr>
+                                    <td>07:30</td>
+                                    <td>08:25</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Recess</td>
+                                </tr>
+                                <tr>
+                                    <td>09:50</td>
+                                    <td>10:45</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container center">
+                        <div class="card">
+                            <h1 class="header">Thursday</h1>
+                            <table class="tt">
+                                <tr>
+                                    <td>07:30</td>
+                                    <td>08:25</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Recess</td>
+                                </tr>
+                                <tr>
+                                    <td>09:50</td>
+                                    <td>10:45</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container center">
+                        <div class="card">
+                            <h1 class="header">Friday</h1>
+                            <table class="tt">
+                                <tr>
+                                    <td>07:30</td>
+                                    <td>08:25</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Recess</td>
+                                </tr>
+                                <tr>
+                                    <td>09:50</td>
+                                    <td>10:45</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li> -->
+    
+            </ul>
+            <div id="uk-extra">
+                <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#" uk-slidenav-previous
+                    uk-slider-item="previous"></a>
+                <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#" uk-slidenav-next
+                    uk-slider-item="next"></a>
+        
+                <div class="uk-position-bottom-center uk-position-small">
+                    <ul class="uk-thumbnav">
+                        <li uk-slider-item="0">Mon</li>
+                        <li uk-slider-item="1">Tue</li>
+                        <li uk-slider-item="2" id="wed">Wed</li>
+                        <li uk-slider-item="3">Thu</li>
+                        <li uk-slider-item="4">Fri</li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    
     <!-- 
-        <h1 class="header">Day </h1>
-    <table>
-        <tr>
-            <td>07:30</td>
-            <td>08:25</td>
-        </tr>
-        <tr>
-            <td colspan="2">Recess</td>
-        </tr>
-        <tr>
-            <td>09:50</td>
-            <td>10:45</td>
-        </tr>
-    </table> -->
+        <div class="container center">
+            <div class="card">
+                <h1 class="header">Monday</h1>
+                <table class="tt">
+                    <tr>
+                        <td>07:30</td>
+                        <td>OOPJ</td>
+                    </tr>
+                    <tr>
+                        <td>08:25</td>
+                        <td>ADA</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Recess</td>
+                    </tr>
+                    <tr>
+                        <td>09:50</td>
+                        <td>ACN</td>
+                    </tr>
+                </table>
+            </div>
+        </div> -->
+    </section>
 
 </body>
 
 <script src="script.js"></script>
+
 </html>
