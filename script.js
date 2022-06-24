@@ -47,11 +47,12 @@ function abcd()
         this.document.getElementById("slider").setAttribute("uk-slider", 'center: true');
         document.getElementById("uk-extra").style.display = "block";
     }
-    console.log("lol");
 }
 setTimeout(function () {
     abcd();
 }, 300);
+
+
 let i = 0;
 for (let day of timeTable) {
 
