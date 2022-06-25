@@ -35,17 +35,41 @@ window.addEventListener("resize", function (event) {
     abcd();
 })
 
-function abcd()
-{
-    if (this.document.body.clientWidth > 1500) {
-        this.document.getElementById("wed").click();
+var todayDate = (new Date()).getDay();
+console.log(todayDate);
+switch (todayDate) {
+    case 1:
+        today = days[0];
+        break;
+    case 2:
+        today = days[1];
+        break;
+    case 3:
+        today = days[2];
+        break;
+    case 4:
+        today = days[3];
+        break;
+    case 5:
+        today = days[4];
+        break;
+    default:
+        today = days[0]
+}
+
+function abcd() {
+    if (document.body.clientWidth > 1500) {
+        document.getElementById("Wednesday").click();
         setTimeout(function () {
-            this.document.getElementById("slider").removeAttribute("uk-slider");
+            document.getElementById("slider").removeAttribute("uk-slider");
             document.getElementById("uk-extra").style.display = "none";
         }, 500);
     } else {
-        this.document.getElementById("slider").setAttribute("uk-slider", 'center: true');
+        document.getElementById("slider").setAttribute("uk-slider", 'center: true');
         document.getElementById("uk-extra").style.display = "block";
+        // setTimeout(function () {
+            document.getElementById(today).click();
+        // }, 500);
     }
 }
 setTimeout(function () {

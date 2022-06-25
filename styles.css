@@ -66,6 +66,7 @@ body {
 }
 .card {
 	box-sizing: border-box;
+	width: calc(15vw + 2vh);
 	background-color: var(--element-bg);
 	position: relative;
 	padding: 40px 20px;
@@ -105,12 +106,12 @@ body {
 	border-bottom-right-radius: 10px;
 }
 .uk-thumbnav li {
-	font-size: 20px;
 	font-weight: 500;
 	font-family: "PT Sans Narrow";
 	cursor: pointer;
 	/* font-size: calc(0.5vw + 0.5vh); */
 	font-size: calc(0.5vw + 0.5vh);
+	font-size: 0px;
 }
 .uk-thumbnav li:not(.uk-active) {
 	color: #aecafc;
@@ -121,7 +122,8 @@ body {
 }
 
 #contect-me {
-	font-family: Cambria;
+	font-family: "PT Sans Narrow";
+	font-weight: 800;
 	font-size: 24px;
 	position: fixed;
 	letter-spacing: 4px;
@@ -162,9 +164,12 @@ body {
 	}
 }
 
-@media (max-width: 1050px) and (min-width: 555px) {
+@media (max-width: 1500px) and (min-width: 555px) {
+	.card{
+		width: auto;
+	}
 	#contect-me {
-		font-size: calc(3vw + 1vh);
+		font-size: calc(2.5vw + 0.5vh);
 	}
 	.header {
 		font-size: calc(2vw + 4vh);
@@ -177,8 +182,11 @@ body {
 	}
 }
 @media (max-width: 555px) {
+	.card{
+		width: auto;
+	}
 	#contect-me {
-		font-size: calc(3vw + 1vh);
+		font-size: calc(3vw + 1.5vh);
 	}
 	.header {
 		font-size: calc(5vw + 4vh);
