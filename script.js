@@ -1,33 +1,34 @@
-var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+var days = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 var timeTable = [
     [
-        { startTime: "07:30", endTime: "09:15", subject: "BX1 -SE - B6 (RVV) <br>BX2 - MINI PROJ- B7 (KRC)<br>BX3- ADA -B5(BUT)" },
+        { startTime: "08:25", endTime: "09:20", subject: "ADA (249)" },
         { subject: "RECESS" },
-        { startTime: "09:50", endTime: "10:45", subject: "OOPJ (AAP)" }
+        { startTime: "09:50", endTime: "10:45", subject: "OOPJ (250)" },
+        { startTime: "10:45", endTime: "11:40", subject: "ACN (250)" },
+        { subject: "RECESS" },
+        { startTime: "11:50", endTime: "01:40", subject: "BX1 - ADA [B1]<br>BX2 - OOPJ [B4]<br>BX3 - SE [B3]<br>" }
     ],
     [
-        { startTime: "07:30", endTime: "08:20", subject: "ADA (BUT)" },
-        { startTime: "08:25", endTime: "09:15", subject: "SE (RVV)" },
+        { startTime: "08:25", endTime: "09:20", subject: "ADA (246)" },
         { subject: "RECESS" },
-        { startTime: "09:50", endTime: "11:40", subject: "BX1 -OOPJ - B4 (AAP) <br>BX2 - ADA -B5 (BUT)<br>BX3- MINI PROJ- B6 (NPB)" }
+        { startTime: "09:50", endTime: "11:40", subject: "BX1 -OOPJ - B4<br>BX2 - ADA [B5]<br>BX3- MINI PROJ [B6]<br>" },
+        { subject: "RECESS" },
+        { startTime: "11:50", endTime: "12:45", subject: "SE (248)" }
     ],
     [
-        { startTime: "07:30", endTime: "08:20", subject: "ADA (BUT)" },
-        { startTime: "08:25", endTime: "09:15", subject: "OOPJ (AAP)" },
+        { startTime: "08:25", endTime: "09:20", subject: "OOPJ (249)" },
         { subject: "RECESS" },
-        { startTime: "09:50", endTime: "11:40", subject: "BX1 -MINI PROJ- B5 (RJS) <br>BX2 - SE - B8 (RVV)  <br>BX3- OOPJ - B4 (AAP)" },
+        { startTime: "09:50", endTime: "11:40", subject: "BX1 - MINI PROJ [B6]<br>BX2 - SE [B4]<br>BX3 - ADA [B5]<br>" }
     ],
     [
-        { startTime: "08:25", endTime: "09:15", subject: "ADA( BUT)" },
+        { startTime: "07:30", endTime: "09:20", subject: "BX1 - SE [B8]<br>BX2 - MINI PROJ [B5]<br>BX3 - OOPJ [B4]<br>" },
         { subject: "RECESS" },
-        { startTime: "09:50", endTime: "10:45", subject: "OOPJ (AAP)" },
-        { startTime: "10:45", endTime: "11:40", subject: "ACN (KRC)" }
+        { startTime: "09:50", endTime: "10:45", subject: "SE (248)" }
     ],
     [
-        { startTime: "07:30", endTime: "09:15", subject: "BX1 -ADA -B5(BUT) <br>BX2 - OOPJ - B4 (AAP) <br>BX3- SE - B8 (RVV)" },
-        { subject: "RECESS" },
-        { startTime: "09:50", endTime: "10:45", subject: "SE (RVV)" }
+        { startTime: "07:30", endTime: "08:25", subject: "OOPJ (246)" },
+        { startTime: "08:25", endTime: "09:20", subject: "ADA (246)" }
     ],
 ]
 selectedDay = "Monday";
@@ -36,7 +37,7 @@ window.addEventListener("resize", function (event) {
 })
 
 var todayDate = (new Date()).getDay();
-console.log(todayDate);
+// console.log(todayDate);
 switch (todayDate) {
     case 1:
         today = days[0];

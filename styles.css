@@ -166,7 +166,7 @@ body {
 
 @media (max-width: 1500px) and (min-width: 555px) {
 	.card{
-		width: auto;
+		width: calc(35vw + 15vh);
 	}
 	#contect-me {
 		font-size: calc(2.5vw + 0.5vh);
@@ -183,7 +183,7 @@ body {
 }
 @media (max-width: 555px) {
 	.card{
-		width: auto;
+		width: calc(60vw + 10vh);
 	}
 	#contect-me {
 		font-size: calc(3vw + 1.5vh);
