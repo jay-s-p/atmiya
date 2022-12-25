@@ -1,6 +1,6 @@
-var days = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-var timeTable = [
+const TIMETABLE_BX = [
     [
         { startTime: "08:25", endTime: "09:20", subject: "ADA (249)" },
         { subject: "RECESS" },
@@ -31,34 +31,32 @@ var timeTable = [
         { startTime: "08:25", endTime: "09:20", subject: "ADA (246)" }
     ],
 ]
-selectedDay = "Monday";
-window.addEventListener("resize", function (event) {
-    abcd();
-})
+
+window.addEventListener("resize", setProperResponsiveViewForDifferentScreenWidth)
 
 var todayDate = (new Date()).getDay();
 // console.log(todayDate);
 switch (todayDate) {
     case 1:
-        today = days[0];
+        today = DAYS[0];
         break;
     case 2:
-        today = days[1];
+        today = DAYS[1];
         break;
     case 3:
-        today = days[2];
+        today = DAYS[2];
         break;
     case 4:
-        today = days[3];
+        today = DAYS[3];
         break;
     case 5:
-        today = days[4];
+        today = DAYS[4];
         break;
     default:
-        today = days[0]
+        today = DAYS[0]
 }
 
-function abcd() {
+const setProperResponsiveViewForDifferentScreenWidth = () => {
     if (document.body.clientWidth > 1500) {
         document.getElementById("Wednesday").click();
         setTimeout(function () {
@@ -69,17 +67,18 @@ function abcd() {
         document.getElementById("slider").setAttribute("uk-slider", 'center: true');
         document.getElementById("uk-extra").style.display = "block";
         // setTimeout(function () {
-            document.getElementById(today).click();
+        document.getElementById(today).click();
         // }, 500);
     }
 }
+
 setTimeout(function () {
-    abcd();
+    setProperResponsiveViewForDifferentScreenWidth();
 }, 300);
 
 
-let i = 0;
-for (let day of timeTable) {
+let daysIterator = 0;
+for (let day of TIMETABLE_BX) {
 
     // create li tag
     let li = document.createElement("li");
@@ -97,7 +96,7 @@ for (let day of timeTable) {
     // create h1 header
     let h1 = document.createElement("h1");
     h1.className = "header"; // add class name
-    h1.innerText = days[i];
+    h1.innerText = DAYS[daysIterator];
     card.appendChild(h1); // append h1 to card
 
     // create table
@@ -118,27 +117,28 @@ for (let day of timeTable) {
             td.innerHTML = data.subject;
             td.colSpan = 2;
             tr.appendChild(td);
-        } else {
-            let td1 = document.createElement("td");
-            let td2 = document.createElement("td");
-            if (index == 0) {
-                td1.className = "tl";
-                td2.className = "tr";
-            } else if (index == len - 1) {
-                td1.className = "bl";
-                td2.className = "br";
-            }
-            td1.innerText = data.startTime;
-            td2.innerHTML = data.subject;
-            tr.appendChild(td1);
-            tr.appendChild(td2);
+            continue;
         }
-        index++;
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        if (index == 0) {
+            td1.className = "tl";
+            td2.className = "tr";
+        } else if (index == len - 1) {
+            td1.className = "bl";
+            td2.className = "br";
+        }
+        td1.innerText = data.startTime;
+        td2.innerText = data.subject;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
 
         table.appendChild(tr); // append tr to table
+        
+        ++index;
     }
 
     document.getElementById("list").appendChild(li);
 
-    i++;
+    daysIterator++;
 }
