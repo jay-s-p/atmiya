@@ -1,60 +1,94 @@
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
+const DOTNET = { name: ".NET", teacher: "KRUPA RAJPARA" }
+const TOC = { name: "TOC", teacher: "Rupal Shilu", fullform: "THEORY OF COMPUTATION" }
+const MCI = { name: "MCI", teacher: "YAGNESH MAKAWANA", fullform: "MICROPROCESSOR CONTROLLER INTERFACE" }
+const PYTHON = { name: "Python", teacher: "JITENDRA KARIYA" }
+const EBM = { name: "EBM", teacher: "KRINA BHAVESHBHAI MASHARU", fullform: "ECONOMICS AND BUSINESS MANAGEMENT" }
+const CS = { name: "CS", teacher: "BANSI RAM", fullform: "CYBER SECURITY" }
+const MINIPROJ = { name: "MINI-PROJECT" };
+const QALR = { name: "QALR" };
+const RECESS = { name: "RECESS" };
+const BX1 = "BX1 - ";
+const BX2 = "<br />BX2 - ";
+const BX3 = "<br />BX3 - ";
+const SUBJECT = "";
+
 const TIMETABLE_BX = [
     [
-        { startTime: "08:25", endTime: "09:20", subject: "ADA (249)" },
-        { subject: "RECESS" },
-        { startTime: "09:50", endTime: "10:45", subject: "OOPJ (250)" },
-        { startTime: "10:45", endTime: "11:40", subject: "ACN (250)" },
-        { subject: "RECESS" },
-        { startTime: "11:50", endTime: "01:40", subject: "BX1 - ADA [B1]<br>BX2 - OOPJ [B4]<br>BX3 - SE [B3]<br>" }
+        { startTime: "07:30", endTime: "08:25", subject: DOTNET },
+        { startTime: "08:25", endTime: "09:20", subject: TOC },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "10:45", subject: MCI },
+        { startTime: "10:45", endTime: "11:40", subject: PYTHON },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "01:40", subject: QALR },
     ],
     [
-        { startTime: "08:25", endTime: "09:20", subject: "ADA (246)" },
-        { subject: "RECESS" },
-        { startTime: "09:50", endTime: "11:40", subject: "BX1 -OOPJ - B4<br>BX2 - ADA [B5]<br>BX3- MINI PROJ [B6]<br>" },
-        { subject: "RECESS" },
-        { startTime: "11:50", endTime: "12:45", subject: "SE (248)" }
+        { startTime: "07:30", endTime: "09:20", subject: [MCI, CS, PYTHON] },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "10:45", subject: MCI },
+        { startTime: "10:45", endTime: "11:40", subject: DOTNET },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: EBM },
     ],
     [
-        { startTime: "08:25", endTime: "09:20", subject: "OOPJ (249)" },
-        { subject: "RECESS" },
-        { startTime: "09:50", endTime: "11:40", subject: "BX1 - MINI PROJ [B6]<br>BX2 - SE [B4]<br>BX3 - ADA [B5]<br>" }
+        { startTime: "07:30", endTime: "09:20", subject: [DOTNET, MINIPROJ, MCI] },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "11:40", subject: [CS, MCI, MINIPROJ] },
     ],
     [
-        { startTime: "07:30", endTime: "09:20", subject: "BX1 - SE [B8]<br>BX2 - MINI PROJ [B5]<br>BX3 - OOPJ [B4]<br>" },
-        { subject: "RECESS" },
-        { startTime: "09:50", endTime: "10:45", subject: "SE (248)" }
+        { startTime: "07:30", endTime: "09:20", subject: [MINIPROJ, PYTHON, DOTNET] },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "10:45", subject: PYTHON },
+        { startTime: "10:45", endTime: "11:40", subject: TOC },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: EBM },
     ],
     [
-        { startTime: "07:30", endTime: "08:25", subject: "OOPJ (246)" },
-        { startTime: "08:25", endTime: "09:20", subject: "ADA (246)" }
+        { startTime: "07:30", endTime: "08:25", subject: DOTNET },
+        { startTime: "08:25", endTime: "09:20", subject: TOC },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "11:40", subject: [PYTHON, DOTNET, CS] },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: PYTHON },
+        { startTime: "12:45", endTime: "01:40", subject: MCI },
     ],
 ]
 
-window.addEventListener("resize", setProperResponsiveViewForDifferentScreenWidth)
+// TODO
+const TIMETABLE_BY = [
+    [
+        { startTime: "07:30", endTime: "08:25", subject: SUBJECT },
+        { startTime: "08:25", endTime: "09:20", subject: SUBJECT },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "10:45", subject: SUBJECT },
+        { startTime: "10:45", endTime: "11:40", subject: SUBJECT },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: SUBJECT },
+        { startTime: "12:45", endTime: "01:40", subject: SUBJECT },
+    ],
+]
 
-var todayDate = (new Date()).getDay();
-// console.log(todayDate);
-switch (todayDate) {
-    case 1:
-        today = DAYS[0];
-        break;
-    case 2:
-        today = DAYS[1];
-        break;
-    case 3:
-        today = DAYS[2];
-        break;
-    case 4:
-        today = DAYS[3];
-        break;
-    case 5:
-        today = DAYS[4];
-        break;
-    default:
-        today = DAYS[0]
-}
+// standard template
+let TIMETABLE = [
+    [
+        { startTime: "07:30", endTime: "08:25", subject: SUBJECT },
+        { startTime: "08:25", endTime: "09:20", subject: SUBJECT },
+        { subject: RECESS },
+        { startTime: "09:50", endTime: "10:45", subject: SUBJECT },
+        { startTime: "10:45", endTime: "11:40", subject: SUBJECT },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: SUBJECT },
+        { startTime: "12:45", endTime: "01:40", subject: SUBJECT },
+    ],
+]
+
+TIMETABLE = TIMETABLE_BX;
+
+
+var todayDate = (new Date()).getDay(); // getting current date
+today = DAYS[todayDate - 1];
 
 const setProperResponsiveViewForDifferentScreenWidth = () => {
     if (document.body.clientWidth > 1500) {
@@ -66,11 +100,12 @@ const setProperResponsiveViewForDifferentScreenWidth = () => {
     } else {
         document.getElementById("slider").setAttribute("uk-slider", 'center: true');
         document.getElementById("uk-extra").style.display = "block";
-        // setTimeout(function () {
-        document.getElementById(today).click();
-        // }, 500);
+        if (document.getElementById(today))
+            document.getElementById(today).click();
     }
 }
+
+window.addEventListener("resize", setProperResponsiveViewForDifferentScreenWidth);
 
 setTimeout(function () {
     setProperResponsiveViewForDifferentScreenWidth();
@@ -78,7 +113,7 @@ setTimeout(function () {
 
 
 let daysIterator = 0;
-for (let day of TIMETABLE_BX) {
+for (let day of TIMETABLE) {
 
     // create li tag
     let li = document.createElement("li");
@@ -95,7 +130,7 @@ for (let day of TIMETABLE_BX) {
 
     // create h1 header
     let h1 = document.createElement("h1");
-    h1.className = "header"; // add class name
+    h1.className = "header noselect"; // add class name
     h1.innerText = DAYS[daysIterator];
     card.appendChild(h1); // append h1 to card
 
@@ -105,36 +140,55 @@ for (let day of TIMETABLE_BX) {
     card.appendChild(table); // append table to table card
 
     // loop for tr
-    let len = day.length;
     let index = 0;
     for (data of day) {
+        let len = day.length;
+        // console.log(data)
+        // console.log(len)
         // create tr element
         let tr = document.createElement("tr");
 
         // TD logic
-        if (data.subject == "RECESS") {
+        if (data.subject == RECESS) {
             let td = document.createElement("td");
-            td.innerHTML = data.subject;
+            td.className = "noselect";
+            td.innerHTML = RECESS.name;
             td.colSpan = 2;
             tr.appendChild(td);
-            continue;
+        } else {
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            // console.log(daysIterator + " " + index + " " + len)
+            if (index == 0) {
+                td1.className = "tl noselect";
+                td2.className = "tr noselect";
+                // console.log("top"+daysIterator);
+            } else if (index == len - 1) {
+                // console.log("bottom"+daysIterator);
+                td1.className = "bl noselect";
+                td2.className = "br noselect";
+            } else {
+                td1.className = "noselect";
+                td2.className = "noselect";
+            }
+            td1.innerText = data.startTime;
+            if (data.subject.length) {
+                td2.innerHTML =
+                    BX1 + data.subject[0].name +
+                    BX2 + data.subject[1].name +
+                    BX3 + data.subject[2].name;
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+            }
+            else {
+                td2.innerHTML = data.subject.name;
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+            }
         }
-        let td1 = document.createElement("td");
-        let td2 = document.createElement("td");
-        if (index == 0) {
-            td1.className = "tl";
-            td2.className = "tr";
-        } else if (index == len - 1) {
-            td1.className = "bl";
-            td2.className = "br";
-        }
-        td1.innerText = data.startTime;
-        td2.innerText = data.subject;
-        tr.appendChild(td1);
-        tr.appendChild(td2);
 
         table.appendChild(tr); // append tr to table
-        
+
         ++index;
     }
 
