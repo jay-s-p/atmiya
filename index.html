@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Atmiya Time Table 5th Sem BX</title>
-    <meta name="description" content="Time Table 5th sem bx atmiya university, atmiya, time table, 5th sem bx">
+    <title>6th Sem Atmiya Time Table</title>
+    <meta name="description" content="Time Table 6th sem bx atmiya university, atmiya, time table, 6th sem bx">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- <link async rel="stylesheet" href="ext/uikit.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
     <link defer href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -17,12 +17,14 @@
     <link defer href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo_round_dark.ico">
 
-    <link rel="stylesheet" href="./css/loader.min.css?ver=1">
-    <link defer rel="stylesheet" href="./css/styles.min.css?ver=2">
+    <link rel="stylesheet" href="./css/loader.min.css?ver=2">
+    <link defer rel="stylesheet" href="./css/styles.min.css?ver=3">
+    <link defer rel="stylesheet" href="./css/navbar.min.css?ver=1">
 
-    <script defer src="./js/script.min.js?ver=3"></script>
+    <script defer src="./js/script.min.js?ver=4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <link defer href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,13 +33,51 @@
             <span class="loader1"></span>
         </div>
     </div>
-    <header>
-        <a href="https://www.instagram.com/jay__s__p/" target="_blank">
-            <div id="contect-me" class="linear-wipe">
+    <header id="header">
+        <div id="contact-me-container">
+            <a  href="https://www.instagram.com/jay__s__p/" target="_blank" id="contact-me" class="linear-wipe">
                 IG : jay__s__p
-            </div>
-        </a>
+            </a>
+        </div>
+        <input type="checkbox" name="navbar" id="navbar">
+        <label for="navbar" id="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="Menu" id="nav">
+            <ul class="Menu-list noselect" data-offset="10">
+                <li class="Menu-list-item" id="bx" data-offset="20" onclick="setPage(0)">
+                    BX
+                    <span class="Mask"><span>BX</span></span>
+                    <span class="Mask"><span>BX</span></span>
+                </li>
+                <li class="Menu-list-item" id="by" data-offset="16" onclick="setPage(1)">
+                    BY
+                    <span class="Mask"><span>BY</span></span>
+                    <span class="Mask"><span>BY</span></span>
+                </li>
+            </ul>
+        </nav>
+        <!-- <nav id="nav">
+            <div>BX</div>
+            <div>BY</div>
+        </nav> -->
     </header>
+    <!-- <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">DesignX</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav> -->
     <section id="main">
         <div uk-slider="center: true" id="slider">
             <ul class="uk-slider-items center uk-grid" id="list">
@@ -63,10 +103,10 @@
 
 <!-- <script async src="ext/uikit.min.js"></script>
 <script async src="ext/uikit-icons.min.js"></script> -->
-<!-- <script>
+<script>
     setTimeout(() => {
-        document.getElementsByTagName("div")[document.getElementsByTagName("div").length-1].style.display = "none";
+        document.getElementById("main").nextSibling.nextSibling.remove();
     }, 111);
-</script> -->
+</script>
 
 </html>
