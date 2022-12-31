@@ -7,19 +7,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link async href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
-    <link async href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-    <link async href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap" rel="stylesheet">
-    <link async href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link async href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-
+    
     <!-- <link async rel="stylesheet" href="ext/uikit.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="styles.min.css?ver=1">
+    <link defer href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo_round_dark.ico">
+
+    <link rel="stylesheet" href="./css/loader.min.css?ver=1">
+    <link defer rel="stylesheet" href="./css/styles.min.css?ver=2">
+
+    <script defer src="./js/script.min.js?ver=3"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
 </head>
 
 <body>
+    <div id="loadingBackground">
+        <div class="loaderContainer">
+            <span class="loader1"></span>
+        </div>
+    </div>
     <header>
         <a href="https://www.instagram.com/jay__s__p/" target="_blank">
             <div id="contect-me" class="linear-wipe">
@@ -33,10 +44,8 @@
                 <!-- Time table added here through JavaScript. -->
             </ul>
             <div id="uk-extra">
-                <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#"
-                    uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#"
-                    uk-slidenav-next uk-slider-item="next"></a>
+                <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                 <div class="uk-position-bottom-center uk-position-small">
                     <ul class="uk-thumbnav">
                         <li uk-slider-item="0" id="Monday">Mon</li>
@@ -54,8 +63,10 @@
 
 <!-- <script async src="ext/uikit.min.js"></script>
 <script async src="ext/uikit-icons.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
-<script src="script.min.js?ver=2"></script>
+<!-- <script>
+    setTimeout(() => {
+        document.getElementsByTagName("div")[document.getElementsByTagName("div").length-1].style.display = "none";
+    }, 111);
+</script> -->
 
 </html>

@@ -1,3 +1,5 @@
 .vscode
 *.hm
 ext
+.log
+temp

@@ -196,3 +196,10 @@ for (let day of TIMETABLE) {
 
     daysIterator++;
 }
+
+setTimeout(()=>{
+    document.getElementById("loadingBackground").style.display = "none";
+},2000)
+setTimeout(()=>{
+    document.querySelector("body > div:nth-child(4)").style.display = "none";
+},1000)
