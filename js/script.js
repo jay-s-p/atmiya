@@ -275,6 +275,9 @@ let setPage = x => {
         }, 2000)
     }
     setTimeTable();
+    setTimeout(function () {
+        setProperResponsiveViewForDifferentScreenWidth();
+    }, 300);
 }
 
 setTimeout(() => {
