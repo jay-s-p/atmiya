@@ -1,102 +1,115 @@
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-const DOTNET = { name: ".NET", teacher: "Krupa Rajpara" }
-const TOC = { name: "TOC", teacher: "Rupal Shilu", fullform: "THEORY OF COMPUTATION" }
-const MCI = { name: "MCI", teacher: "Yagnesh Makawana", fullform: "MICROPROCESSOR CONTROLLER INTERFACE" }
-const PYTHON = { name: "Python", teacher: "Jitendra Kariya" }
-const EBM = { name: "EBM", teacher: "Unknown", fullform: "ECONOMICS AND BUSINESS MANAGEMENT" }
-const CS = { name: "CS", teacher: "Krina Masharu", fullform: "CYBER SECURITY" }
-const MINIPROJ = { name: "MINI-PROJECT", teacher: "Bansi Ram" };
-const QALR = { name: "QALR" };
+const INS = {
+    name: "INS",
+    teacher: "Tosal Bhalodia",
+    fullform: "Information and Network Security"
+};
+
+const CD = {
+    name: "CD",
+    teacher: "Rupal Shilu",
+    fullform: "Compiler Design"
+};
+
+const CC = {
+    name: "CC",
+    teacher: "Unknown",
+    fullform: "Cloud Computing"
+};
+
+const MCWN = {
+    name: "MCWN",
+    teacher: "Unknown",
+    fullform: "Mobile Computing and Wireless Network"
+};
+
+const MP = {
+    name: "MP",
+    teacher: "Unknown",
+    fullform: "Major Project"
+};
+
 const RECESS = { name: "RECESS" };
-const B1 = "BX1 - ";
-const B2 = "BX2 - ";
-const B3 = "BX3 - ";
+let B1 = "BX1 - ";
+let B2 = "BX2 - ";
+let B3 = "BX3 - ";
 const SUBJECT = "";
 
-const TIMETABLE_BX = [
-    [
-        { startTime: "07:30", endTime: "08:25", subject: DOTNET },
-        { startTime: "08:25", endTime: "09:20", subject: TOC },
+let TIMETABLE_BX = {
+    'Monday': [
+        { startTime: "07:30", endTime: "08:25", subject: INS },
+        { startTime: "08:25", endTime: "09:20", subject: CD },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: MCI },
-        { startTime: "10:45", endTime: "11:40", subject: PYTHON },
-        { subject: RECESS },
-        { startTime: "11:50", endTime: "01:40", subject: QALR },
+        { startTime: "09:50", endTime: "10:45", subject: MCWN },
+        { startTime: "10:45", endTime: "11:40", subject: CC },
     ],
-    [
-        { startTime: "07:30", endTime: "09:20", subject: [MCI, CS, PYTHON] },
+    "Tuesday": [
+        { startTime: "07:30", endTime: "09:20", subject: [INS, CD, CC] },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: MCI },
-        { startTime: "10:45", endTime: "11:40", subject: DOTNET },
+        { startTime: "09:50", endTime: "10:45", subject: INS },
+        { startTime: "10:45", endTime: "11:40", subject: MCWN },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: CD },
     ],
-    [
-        { startTime: "07:30", endTime: "09:20", subject: [DOTNET, MINIPROJ, MCI] },
+    "Wednesday": [
+        { startTime: "08:25", endTime: "09:20", subject: CC },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "11:40", subject: [CS, MCI, MINIPROJ] },
+        { startTime: "09:50", endTime: "11:40", subject: [MCWN, INS, MP] },
         { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: EBM },
+        { startTime: "11:50", endTime: "1:40", subject: [CC, MP, CD] },
     ],
-    [
-        { startTime: "07:30", endTime: "09:20", subject: [MINIPROJ, PYTHON, DOTNET] },
+    "Thursday": [
+        { startTime: "07:30", endTime: "08:25", subject: CC },
+        { startTime: "08:25", endTime: "09:20", subject: MCWN },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: PYTHON },
-        { startTime: "10:45", endTime: "11:40", subject: TOC },
-        { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: EBM },
+        { startTime: "09:50", endTime: "11:40", subject: [CD, MCWN, INS] },
     ],
-    [
-        { startTime: "07:30", endTime: "08:25", subject: DOTNET },
-        { startTime: "08:25", endTime: "09:20", subject: TOC },
+    "Friday": [
+        { startTime: "07:30", endTime: "08:25", subject: INS },
+        { startTime: "08:25", endTime: "09:20", subject: CD },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "11:40", subject: [PYTHON, DOTNET, CS] },
-        { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: PYTHON },
-        { startTime: "12:45", endTime: "01:40", subject: MCI },
+        { startTime: "09:50", endTime: "10:45", subject: [MP, CC, MCWN] },
     ],
-]
+}
 
-const TIMETABLE_BY = [
-    [
-        { startTime: "07:30", endTime: "08:25", subject: PYTHON },
-        { startTime: "08:25", endTime: "09:20", subject: DOTNET },
+let TIMETABLE_BY = {
+    'Monday': [
+        { startTime: "07:30", endTime: "08:25", subject: MCWN },
+        { startTime: "08:25", endTime: "09:20", subject: CC },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: [MINIPROJ, DOTNET, CS] },
+        { startTime: "09:50", endTime: "10:45", subject: INS },
+        { startTime: "10:45", endTime: "11:40", subject: CD },
         { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: TOC },
+        { startTime: "11:50", endTime: "1:40", subject: [MCWN, INS, CD] },
     ],
-    [
-        { startTime: "07:30", endTime: "08:25", subject: DOTNET },
-        { startTime: "08:25", endTime: "09:20", subject: TOC },
+    "Tuesday": [
+        { startTime: "08:25", endTime: "09:20", subject: MCWN },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: PYTHON },
-        { startTime: "10:45", endTime: "11:40", subject: EBM },
+        { startTime: "09:50", endTime: "11:40", subject: [CD, CC, MP] },
         { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: [PYTHON, MINIPROJ, MCI] },
+        { startTime: "11:50", endTime: "12:45", subject: CC },
     ],
-    [
-        { startTime: "09:50", endTime: "10:45", subject: [DOTNET, PYTHON, MINIPROJ] },
+    "Wednesday": [
+        { startTime: "07:30", endTime: "09:20", subject: [INS, CD, MCWN] },
         { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: MCI },
-        { startTime: "12:45", endTime: "01:40", subject: TOC },
+        { startTime: "09:50", endTime: "10:45", subject: INS },
+        { startTime: "10:45", endTime: "11:40", subject: CC },
+        { subject: RECESS },
+        { startTime: "11:50", endTime: "12:45", subject: MCWN },
     ],
-    [
-        { startTime: "08:25", endTime: "09:20", subject: MCI },
+    "Thursday": [
+        { startTime: "07:30", endTime: "08:25", subject: INS },
+        { startTime: "08:25", endTime: "09:20", subject: CD },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: [MCI, CS, DOTNET] },
-        { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: PYTHON },
-        { startTime: "12:45", endTime: "01:40", subject: EBM },
+        { startTime: "09:50", endTime: "11:40", subject: [MP, MP, CC] },
     ],
-    [
-        { startTime: "07:30", endTime: "08:25", subject: [CS, MCI, PYTHON] },
+    "Friday": [
+        { startTime: "07:30", endTime: "09:20", subject: [CC, MCWN, INS] },
         { subject: RECESS },
-        { startTime: "09:50", endTime: "10:45", subject: MCI },
-        { startTime: "10:45", endTime: "11:40", subject: DOTNET },
-        { subject: RECESS },
-        { startTime: "11:50", endTime: "12:45", subject: QALR },
+        { startTime: "09:50", endTime: "10:45", subject: CD },
     ],
-]
+}
 
 // standard template
 let TIMETABLE = [
@@ -115,17 +128,22 @@ let TIMETABLE = [
 
 if (!localStorage.getItem("class")) {
     TIMETABLE = TIMETABLE_BX;
+    let B1 = "BX1 - ";
+    let B2 = "BX2 - ";
+    let B3 = "BX3 - ";
     localStorage.setItem("class", 0)
 }
 else if (localStorage.getItem("class") == 0) {
     TIMETABLE = TIMETABLE_BX;
+    let B1 = "BY1 - ";
+    let B2 = "BY2 - ";
+    let B3 = "BY3 - ";
     document.getElementById("bx").classList.add("active");
 }
 else {
     document.getElementById("by").classList.add("active");
     TIMETABLE = TIMETABLE_BY;
 }
-// TIMETABLE = TIMETABLE_BX;
 
 
 var todayDate = (new Date()).getDay(); // getting current date
@@ -155,7 +173,7 @@ setTimeout(function () {
 const setTimeTable = () => {
     let daysIterator = 0;
     document.getElementById("list").innerText = "";
-    for (let day of TIMETABLE) {
+    for (let day of Object.values(TIMETABLE)) {
 
         // create li tag
         let li = document.createElement("li");
@@ -191,7 +209,7 @@ const setTimeTable = () => {
             let tr = document.createElement("tr");
 
             // TD logic
-            if (data.subject == RECESS) {
+            if (data?.subject == RECESS) {
                 let td = document.createElement("td");
                 td.className = "noselect";
                 td.innerHTML = `
@@ -218,32 +236,32 @@ const setTimeTable = () => {
                     td2.className = "noselect";
                 }
                 td1.innerText = data.startTime;
-                if (data.subject.length) {
+                if (data?.subject.length) {
                     td2.innerHTML =
                         `
                     <div class="tooltip">
-                        <span class="tooltiptext">${data.subject[0].teacher}</span>
-                        <div>${B1 + data.subject[0].name}</div>
+                        <span class="tooltiptext">${data?.subject[0].teacher}</span>
+                        <div>${B1 + data?.subject[0].name}</div>
                     </div>
                     <div class="tooltip">
-                        <span class="tooltiptext">${data.subject[1].teacher}</span>
-                        <div>${B2 + data.subject[1].name}</div>
+                        <span class="tooltiptext">${data?.subject[1]?.teacher}</span>
+                        <div>${B2 + data?.subject[1]?.name}</div>
                     </div>
                     <div class="tooltip">
-                        <span class="tooltiptext">${data.subject[2].teacher}</span>
-                        <div>${B3 + data.subject[2].name}</div>
+                        <span class="tooltiptext">${data?.subject[2]?.teacher}</span>
+                        <div>${B3 + data?.subject[2]?.name}</div>
                     </div>`;
-                    B1 + data.subject[0].name +
-                        B2 + data.subject[1].name +
-                        B3 + data.subject[2].name;
+                    B1 + data?.subject[0]?.name +
+                        B2 + data?.subject[1]?.name +
+                        B3 + data?.subject[2]?.name;
                     tr.appendChild(td1);
                     tr.appendChild(td2);
                 }
                 else {
                     td2.innerHTML = `
                     <div class="tooltip">
-                        <span class="tooltiptext">${data.subject.teacher}</span>
-                        <div>${data.subject.name}</div>
+                        <span class="tooltiptext">${data?.subject.teacher}</span>
+                        <div>${data?.subject.name}</div>
                     </div>`;
                     tr.appendChild(td1);
                     tr.appendChild(td2);
