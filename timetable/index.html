@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Atmiya Time Table 7th Sem BX BY ~ jay__s__p</title>
+    <link rel="icon" href="/images/logo.ico">
+    <meta name="description" content="
+    www.atmiyauni.ac.in/ - Atmiya University Rajkot, Gujarat, India.
+    ATMIYA University - Best University in Gujarat | Best University in Rajkot
+    Atmiya university Time Table 7th Sem BX|BY
+    ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- <link async rel="stylesheet" href="ext/uikit.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <link defer href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/loader.min.css?ver=2">
+    <link defer rel="stylesheet" href="./css/styles.min.css?ver=3">
+    <link defer rel="stylesheet" href="./css/navbar.min.css?ver=1">
+    <link defer rel="stylesheet" href="./css/tooltip.min.css">
+
+    <script defer src="./js/script.min.js?var=5"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <link defer href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loadingBackground">
+        <div class="loaderContainer">
+            <span class="loader1"></span>
+        </div>
+    </div>
+    <header id="header">
+        <div id="contact-me-container">
+            <a href="https://www.instagram.com/jay__s__p/" target="_blank" id="contact-me" class="linear-wipe">
+                IG : jay__s__p
+            </a>
+        </div>
+        <input type="checkbox" name="navbar" id="navbar">
+        <label for="navbar" id="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="Menu" id="nav">
+            <ul class="Menu-list noselect" data-offset="10">
+                <li class="Menu-list-item" id="bx" data-offset="20" onclick="setPage(0)">
+                    BX
+                    <span class="Mask"><span>BX</span></span>
+                    <span class="Mask"><span>BX</span></span>
+                </li>
+                <li class="Menu-list-item" id="by" data-offset="16" onclick="setPage(1)">
+                    BY
+                    <span class="Mask"><span>BY</span></span>
+                    <span class="Mask"><span>BY</span></span>
+                </li>
+            </ul>
+        </nav>
+        <!-- <nav id="nav">
+            <div>BX</div>
+            <div>BY</div>
+        </nav> -->
+    </header>
+    <!-- <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">DesignX</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav> -->
+    <section id="main">
+        <div uk-slider="center: true" id="slider">
+            <ul class="uk-slider-items center uk-grid" id="list">
+                <!-- Time table added here through JavaScript. -->
+            </ul>
+            <div id="uk-extra">
+                <a class="uk-slidenav-large uk-position-center-left uk-position uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-slidenav-large uk-position-center-right uk-position uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                <div class="uk-position-bottom-center uk-position-small">
+                    <ul class="uk-thumbnav">
+                        <li uk-slider-item="0" id="Monday">Mon</li>
+                        <li uk-slider-item="1" id="Tuesday">Tue</li>
+                        <li uk-slider-item="2" id="Wednesday">Wed</li>
+                        <li uk-slider-item="3" id="Thursday">Thu</li>
+                        <li uk-slider-item="4" id="Friday">Fri</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+<!-- <script async src="ext/uikit.min.js"></script>
+<script async src="ext/uikit-icons.min.js"></script> -->
+<script>
+    setTimeout(() => {
+        document.getElementById("main").nextSibling.nextSibling.remove();
+    }, 111);
+</script>
+
+</html>
