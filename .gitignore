@@ -3,5 +3,3 @@
 ext
 .log
 temp
-**/*.min.css
-**/*.min.js
