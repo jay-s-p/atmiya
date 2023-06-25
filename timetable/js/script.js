@@ -29,6 +29,7 @@ const MP = {
     teacher: `¯\\_(ツ)_/¯`,
     fullform: "Major Project"
 };
+
 const RECESS = { name: "RECESS" };
 let B1 = "BY1 - ";
 let B2 = "BY2 - ";
@@ -124,7 +125,7 @@ let TIMETABLE = [
     ],
 ]
 
-console.log(localStorage.getItem("class"))
+// console.log(localStorage.getItem("class"))
 if (!localStorage.getItem("class")) {
     TIMETABLE = TIMETABLE_BX;
     B1 = "BX1 - ";
@@ -318,6 +319,3 @@ let setPage = x => {
 setTimeout(() => {
     document.getElementById("loadingBackground").style.display = "none";
 }, 2000)
-// setTimeout(() => {
-//     document.querySelector("body > div:nth-child(4)").style.display = "none";
-// }, 1000)
