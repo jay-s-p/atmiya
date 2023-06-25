@@ -14,22 +14,21 @@ const CD = {
 
 const CC = {
     name: "CC",
-    teacher: "Unknown",
+    teacher: "Riddhi Bhatt",
     fullform: "Cloud Computing"
 };
 
 const MCWN = {
     name: "MCWN",
-    teacher: "Unknown",
+    teacher: "Devangi Paneri",
     fullform: "Mobile Computing and Wireless Network"
 };
 
 const MP = {
     name: "MP",
-    teacher: "Unknown",
+    teacher: `¯\\_(ツ)_/¯`,
     fullform: "Major Project"
 };
-
 const RECESS = { name: "RECESS" };
 let B1 = "BY1 - ";
 let B2 = "BY2 - ";
