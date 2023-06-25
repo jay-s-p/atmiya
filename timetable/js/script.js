@@ -31,9 +31,9 @@ const MP = {
 };
 
 const RECESS = { name: "RECESS" };
-let B1 = "BX1 - ";
-let B2 = "BX2 - ";
-let B3 = "BX3 - ";
+let B1 = "BY1 - ";
+let B2 = "BY2 - ";
+let B3 = "BY3 - ";
 const SUBJECT = "";
 
 let TIMETABLE_BX = {
@@ -125,19 +125,19 @@ let TIMETABLE = [
     ],
 ]
 
-
+console.log(localStorage.getItem("class"))
 if (!localStorage.getItem("class")) {
     TIMETABLE = TIMETABLE_BX;
-    let B1 = "BX1 - ";
-    let B2 = "BX2 - ";
-    let B3 = "BX3 - ";
+    B1 = "BX1 - ";
+    B2 = "BX2 - ";
+    B3 = "BX3 - ";
     localStorage.setItem("class", 0)
 }
 else if (localStorage.getItem("class") == 0) {
     TIMETABLE = TIMETABLE_BX;
-    let B1 = "BY1 - ";
-    let B2 = "BY2 - ";
-    let B3 = "BY3 - ";
+    B1 = "BX1 - ";
+    B2 = "BX2 - ";
+    B3 = "BX3 - ";
     document.getElementById("bx").classList.add("active");
 }
 else {
@@ -287,10 +287,9 @@ let setPage = x => {
         return;
     else if (x == 0) {
         TIMETABLE = TIMETABLE_BX;
-        // console.log("bx - " + x)
-        const B1 = "BX1 - ";
-        const B2 = "BX2 - ";
-        const B3 = "BX3 - ";
+        B1 = "BX1 - ";
+        B2 = "BX2 - ";
+        B3 = "BX3 - ";
         document.getElementById("loadingBackground").style.display = "flex";
         setTimeout(() => {
             document.getElementById("loadingBackground").style.display = "none";
@@ -302,9 +301,9 @@ let setPage = x => {
         document.getElementById("bx").classList.remove("active");
         document.getElementById("by").classList.add("active");
         // console.log("by - " + x)
-        const B1 = "BY1 - ";
-        const B2 = "BY2 - ";
-        const B3 = "BY3 - ";
+        B1 = "BY1 - ";
+        B2 = "BY2 - ";
+        B3 = "BY3 - ";
         document.getElementById("loadingBackground").style.display = "flex";
         setTimeout(() => {
             document.getElementById("loadingBackground").style.display = "none";
